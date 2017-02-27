@@ -1,0 +1,57 @@
+// Place all the styles related to the Epicenter controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+
+
+body{
+	background-color: #e1e8ed;
+}
+
+
+#nav{
+	margin-bottom:-1px;
+}
+
+
+.cover {
+  object-fit: cover;
+  width: 100%;
+  height: -1%;
+  /*opacity: 0.5;*/
+  background-repeat: no-repeat;
+  -webkit-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+}
+ 
+ .pic{
+ 	margin-bottom: 50px;
+ }
+
+
+ .center-it{    
+	text-align: center;
+}
+
+
+
+
+.category-pics {
+	width: 100px;
+	height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+ <nav class="navbar navbar-inverse" id="nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+          </li> 
+        </ul>        
+      </div>
+    </div>
+  </nav>
+
+<div class="pic">
+<img src="/assets/nightlife.jpg" class="cover" height="363">
+</div>
+
+<div class="row">
+  <%= @categories.each do |category| %>
+  <div class="col-md-4">
+    <div class="well center-it">
+      <%#if category.image.url.nil? == false %>
+    <p><%#= image_tag category.image.url, class: "category-pics"%></p>
+
+    <h3><%= link_to category.name, category %></h3>
+    <% end %>
+      
+    </div>
+  </div>
+</div>
+

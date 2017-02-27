@@ -1,0 +1,33 @@
+<%= form_for(category) do |f| %>
+
+<div class="row">
+  <div class="col-md-4">
+  <% if category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+      <% category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="form-group">
+    <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <strong>Upload Image Category</strong>
+    <%= f.file_field :image %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.submit "Creat category", class:  "btn btn-success" %>
+  </div>
+<% end %>
+</div>
+</div>
