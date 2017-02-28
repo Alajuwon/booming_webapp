@@ -28,6 +28,7 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'omniauth-facebook'
+gem 'omniauth-github'
 
 
 gem 'font-awesome-rails'

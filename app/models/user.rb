@@ -12,11 +12,16 @@ class User < ApplicationRecord
 
 
     def self.create_with_omniauth(auth)
-          create! do |user|
+      create! do |user|
+
    		user.provider = auth["provider"]
    		user.uid = auth["uid"]
+   		user.email = auth["info"]["email"]
+      user.password = Devise.friendly_token[0,20]	
      	user.name = auth["info"]["name"]
+     	user.image = auth["info"]["image"]
     end
+  end
  
 
 	  # the following code pulls user avatars from FB:

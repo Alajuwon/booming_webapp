@@ -2,5 +2,5 @@ class Category < ApplicationRecord
 
 	
 
-	has_many :hotspot
+	has_many :hotspots
 end

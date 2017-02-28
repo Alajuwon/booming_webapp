@@ -1,4 +1,21 @@
 
+<div id="user-widget">
+  <% if current_user %>
+    Welcome <strong><%= current_user.name %></strong>!<br />
+    <% if current_user.provider == "facebook" %>
+    <%= image_tag(current_user.normalimage) %><br />
+    <% else %>
+    <%= image_tag current_user.image %><br />
+    <% end %>
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+  <% else %>
+    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %><br />
+    <%= link_to "Sign in with Github", "/auth/github" %><br />
+  <% end %>
+</div>
+
+
+
 <div class="row">
 <div class="col-md-4 col-md-offset-4">
   <div class="well">

@@ -8,9 +8,7 @@
 
 
 
-body{
-	background-color: #e1e8ed;
-}
+
 
 
 #nav{
@@ -22,12 +20,13 @@ body{
   object-fit: cover;
   width: 100%;
   height: -1%;
-  /*opacity: 0.5;*/
-  background-repeat: no-repeat;
+/*  background-repeat: no-repeat;*/
   -webkit-filter: hue-rotate(90deg);
   filter: hue-rotate(90deg);
+  border-radius: 5px
 }
- 
+  
+
  .pic{
  	margin-bottom: 50px;
  }
@@ -35,6 +34,7 @@ body{
 
  .center-it{    
 	text-align: center;
+  border: 1px solid black;
 }
 
 
@@ -45,8 +45,9 @@ body{
 	height: 100px;
 }
 
-
-
+.choose{
+  margin-bottom: 20px
+}
 
 
 

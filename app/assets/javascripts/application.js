@@ -20,16 +20,25 @@
 $(document).ready(function (){
 
     function initialize() {
-    	var hotCoords = new google.map.LatLng(33.7625446,-84.4041539)
+    	var hotCoords = new google.maps.LatLng(33.7625446, -84.4041539)
       var mapOptions = {
-      center: myLatLng,
-      zoom: 14
+      center: hotCoords,
+      zoom: 12,
       scrollwheel: false
       };
         
       var map = new google.maps.Map(document.getElementById('map-canvas'),
                 mapOptions);    
+    
+
+    var marker = new google.maps.Marker({
+        position: hotcoords,
+        map: map,
+        title: "Atl"
+      });
+
     }
+
       
     google.maps.event.addDomListener(window, 'load', initialize);
 });
