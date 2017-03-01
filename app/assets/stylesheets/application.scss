@@ -19,9 +19,24 @@
  @import "font-awesome";
 
 
+@font-face {
+    font-family: 'Rex';
+    src: url('/assets/');
+    src: url('/assets/Rex Bold Inline.otf') format('otf'),
+    url('/assets/Red Bold.otf') format('oft'),
+    url('/assets/Red Light.otf') format('otf'),
+}
+
+
 body{
    background-color: #DDD;
+   /*font-family: 'Rex';*/
   }
+
+.marker-icon {
+	height: 100px;
+	width: 100px;
+}
 
 
   

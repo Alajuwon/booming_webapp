@@ -16,25 +16,28 @@
 //= require_tree .
 
 
-
 $(document).ready(function (){
 
     function initialize() {
     	var hotCoords = new google.maps.LatLng(33.7625446, -84.4041539)
       var mapOptions = {
       center: hotCoords,
-      zoom: 12,
+      zoom: 13,
       scrollwheel: false
       };
         
       var map = new google.maps.Map(document.getElementById('map-canvas'),
-                mapOptions);    
+                mapOptions);  
+
+      //var image = "<%= asset_path 'hotspot_icon.jpeg', class: 'marker-icon' %>";         
     
 
-    var marker = new google.maps.Marker({
-        position: hotcoords,
+      var marker = new google.maps.Marker({
+        position: hotCoords,
         map: map,
-        title: "Atl"
+        title: "ATL",
+        icon: image,
+        animation:google.maps.Animation.Drop
       });
 
     }

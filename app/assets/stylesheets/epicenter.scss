@@ -10,7 +10,6 @@
 
 
 
-
 #nav{
 	margin-bottom:-1px;
 }
@@ -21,9 +20,12 @@
   width: 100%;
   height: -1%;
 /*  background-repeat: no-repeat;*/
-  -webkit-filter: hue-rotate(90deg);
-  filter: hue-rotate(90deg);
+  filter: hue-rotate(175deg);
   border-radius: 5px
+}
+
+.booming{
+  font-family:'Rex Inline';
 }
   
 
@@ -48,8 +50,6 @@
 .choose{
   margin-bottom: 20px
 }
-
-
 
 
 

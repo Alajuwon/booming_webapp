@@ -1,3 +1,4 @@
+
 <%= form_for(hotspot) do |f| %>
   <% if hotspot.errors.any? %>
     <div id="error_explanation">
@@ -11,32 +12,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :city %>
-    <%= f.text_field :city %>
+
+  <div class="form-group">
+    <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :state %>
-    <%= f.text_field :state %>
+
+  <div class="form-group">
+    <%= f.text_field :city, placeholder: "City", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :address %>
-    <%= f.text_field :address %>
+
+  <div class="form-group">
+    <%= f.text_field :state, placeholder: "State", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :longitude %>
-    <%= f.text_field :longitude %>
+
+  <div class="form-group">
+    <%= f.text_field :address, placeholder: "Address", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :latitude %>
-    <%= f.text_field :latitude %>
+
+  <div class="form-group">
+    <%= f.text_field :longitude, placeholder: "Longitude", class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="form-group">
+    <%= f.text_field :latitude, placeholder: "Latitude", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+      <%= f.select :category_id, @categories.collect { |c| [ c.name, c.id ] }, 
+      {:include_blank => "Please select a category"}, class: "form-control" %>
+    </div>
+
+  
+  <div class="form-group">
+    <%= f.submit "Update Hotspot" , class: "btn btn-primary" %>
   </div>
 <% end %>
+
+</div>

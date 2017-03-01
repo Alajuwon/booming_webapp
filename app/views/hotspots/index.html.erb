@@ -1,10 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Hotspots</h1>
+ <nav class="navbar navbar-inverse" id="nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
 
-<table>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+          </li> 
+        </ul>        
+      </div>
+    </div>
+  </nav>
+<div class="container">
+<h1>Hotspots</h1>
+<div class="well">
+<table class="table">
+  
   <thead>
     <tr>
+      <th>Name</th>
       <th>City</th>
       <th>State</th>
       <th>Address</th>
@@ -17,6 +32,7 @@
   <tbody>
     <% @hotspots.each do |hotspot| %>
       <tr>
+        <td><%= hotspot.name %></td>
         <td><%= hotspot.city %></td>
         <td><%= hotspot.state %></td>
         <td><%= hotspot.address %></td>
@@ -29,7 +45,8 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
 <%= link_to 'New Hotspot', new_hotspot_path %>
+</div>

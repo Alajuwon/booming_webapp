@@ -1,12 +1,25 @@
 <p id="notice"><%= notice %></p>
+ <nav class="navbar navbar-inverse" id="nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+          </li> 
+        </ul>        
+      </div>
+    </div>
+  </nav>
 
 
 <div class="container">
-
+<div class="col-md-4 col-md-offset-4">
 <h3>
   <strong>Category:</strong>
   <%= @category.name %>
 </h3>
+</div>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
@@ -14,16 +27,24 @@
 
 
 
+<div id="hotspot-map"></div>
+<script type="text/javascript">
+// handler = Gmaps.build('Google');
+// handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+//   markers = handler.addMarkers(<%=raw @hash.to_json %>);
+//   handler.bounds.extendWith(markers);
+//   handler.fitMapToBounds();
+// });
 
+</script>
 
-
-
-
-
-
-<div id="map-canvas"></div>
-
-
-
-
+<div class="row">
+	<div class="col-md-3" id="hslist">
+<% @category.hotspots.each do |hotspot| %>
+<ul><%= hotspot.name %></ul>
+<% end %>
 </div>
+</div>
+</div>
+
+<%= javascript_tag "hotspots = #{@category.hotspots.to_json.html_safe}" %>

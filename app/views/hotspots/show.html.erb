@@ -3,6 +3,11 @@
 
 
 <p>
+  <strong>Name:</strong>
+  <%= @hotspot.name %>
+</p>
+
+<p>
   <strong>City:</strong>
   <%= @hotspot.city %>
 </p>
@@ -26,6 +31,8 @@
   <strong>Latitude:</strong>
   <%= @hotspot.latitude %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_hotspot_path(@hotspot) %> |
 <%= link_to 'Back', hotspots_path %>

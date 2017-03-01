@@ -15,10 +15,12 @@
   # GET /hotspots/new
   def new
     @hotspot = Hotspot.new
+    @categories = Category.all
   end
 
   # GET /hotspots/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /hotspots
@@ -69,6 +71,6 @@
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hotspot_params
-      params.require(:hotspot).permit(:city, :state, :address, :longitude, :latitude)
+      params.require(:hotspot).permit(:name, :city, :state, :address, :longitude, :latitude, :category_id)
     end
 end

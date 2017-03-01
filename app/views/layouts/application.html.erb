@@ -19,7 +19,7 @@
   	
     <%= yield %>
      <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAScsACsY2-hOyf-qsYQTEDGficG9-3JkA">
+      src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['google_api_key'] %>">
  </script>
   </body>
 </html>

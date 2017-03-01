@@ -6,7 +6,7 @@ class Hotspot < ApplicationRecord
 	after_validation :geocode
 
 
-	def address
-		"#{city} , #{country}"
+	def hotspot
+		"#{city} , #{state} , #{street_address} "
 	end
 end

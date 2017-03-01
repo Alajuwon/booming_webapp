@@ -7,7 +7,17 @@
 
 
 
-#map-canvas {
+#map-canvas, #hotspot-map {
   width: 100%;
   height: 400px;
+}
+
+
+#hslist{
+	margin-top: 70px;
+}
+
+ul{
+	font-size: 30px;
+
 }
