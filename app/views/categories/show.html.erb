@@ -6,11 +6,18 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
           <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+          <li><%= link_to "Hotspots", hotspots_path %></li> 
           </li> 
         </ul>        
       </div>
     </div>
+    <div class="progress">
+  <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 65%" <span class="sr-only">These <%= @category.name %> are 65% Full</span>
+  </div>
+</div>
   </nav>
+
+
 
 
 <div class="container">
@@ -28,15 +35,28 @@
 
 
 <div id="hotspot-map"></div>
+
+
+<button onclick="getLocation()">Test location</button>
 <script type="text/javascript">
-// handler = Gmaps.build('Google');
-// handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-//   markers = handler.addMarkers(<%=raw @hash.to_json %>);
-//   handler.bounds.extendWith(markers);
-//   handler.fitMapToBounds();
-// });
+
+var x = document.GetElementById("hotspot-map");
+function getLocation() {
+  if (navigator.geolocation){
+      navigator.geolocation.watchPosition(showPosition);
+  } else {
+    x.innerHTML = "Cant get location, move somewhere else lol.";}
+  }
+  function showPosition(position){
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+  
+  }
 
 </script>
+
+
+
+
 
 <div class="row">
 	<div class="col-md-3" id="hslist">

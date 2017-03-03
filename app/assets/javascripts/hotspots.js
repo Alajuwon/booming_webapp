@@ -8,13 +8,11 @@ $(document).ready(function (){
 
       var mapOptions = {
       center: hotCoords,
-      zoom: 13,
+      zoom: 11,
       scrollwheel: false
       };
         
-      var map = new google.maps.Map(document.getElementById('hotspot-map'), mapOptions);  
-
-      // var image = "<%= asset_path 'hotspot_icon.jpeg', class: 'marker-icon' %>";         
+      var map = new google.maps.Map(document.getElementById('hotspot-map'), mapOptions);         
     
       var i;
       for (i = 0; i < hotspots.length; i++) {
